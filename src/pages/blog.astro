@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/globals.css';
 
 const blogTitle = 'Mi blog de Astro aprendizaje'
@@ -7,9 +9,7 @@ const blogTitle = 'Mi blog de Astro aprendizaje'
 
 <Layout title="Welcome to Astro.">
 	<main>
-        <a href="/">Inicio</a>
-        <a href="/about/">Sobre mi</a>
-        <a href="/blog/">Blog</a>
+        <Header />
 		
 		<h1> {blogTitle} <span class="text-gradient"></span></h1>
 		<h1>Mi blog de Astro aprendizaje</h1>
@@ -20,6 +20,10 @@ const blogTitle = 'Mi blog de Astro aprendizaje'
             <li><a href="/posts/post3/">Publicación 3</a></li>
 		</ul>
 	</main>
+	<Footer />
+	<script>
+		import "../scripts/menu.js";
+	</script>
 </Layout>
 
 <style>
@@ -52,6 +56,7 @@ const blogTitle = 'Mi blog de Astro aprendizaje'
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		background-color: #a7a1a1;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
